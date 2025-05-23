@@ -1,4 +1,4 @@
-const ClienteRepository = require('../repositories/clientRepository');
+const ClienteRepository = require("../repositories/clientRepository");
 
 const ClienteService = {
   createCliente: async (data) => {
