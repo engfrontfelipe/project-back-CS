@@ -12,9 +12,16 @@ const NoteRepository = {
     );
   },
 
-   delete: (id) =>
+  delete: (id) =>
     client.query("DELETE FROM notas WHERE id = $1 RETURNING *", [id]),
 
-}
+  getAll: () => {
+    return client.query(
+      "SELECT * FROM notas"
+      
+    );
+  }
+
+};
 
 module.exports = NoteRepository;
